@@ -2,9 +2,12 @@
 import argparse
 import os
 import os.path as osp
+import sys
 
 from mmengine.config import Config, DictAction
 from mmengine.runner import Runner
+
+sys.path.append("/dataset/shaoanlu/github/mmlab/mmpose/")
 
 
 def parse_args():

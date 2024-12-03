@@ -1,10 +1,12 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import logging
 from argparse import ArgumentParser
+import sys
 
 from mmcv.image import imread
 from mmengine.logging import print_log
 
+sys.path.append("/dataset/shaoanlu/github/mmlab/mmpose/")
 from mmpose.apis import inference_topdown, init_model
 from mmpose.registry import VISUALIZERS
 from mmpose.structures import merge_data_samples

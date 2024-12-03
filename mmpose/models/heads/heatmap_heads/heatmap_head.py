@@ -208,6 +208,7 @@ class HeatmapHead(BaseHead):
         Returns:
             Tensor: output heatmap.
         """
+        print("heapmap head forward")
         x = feats[-1]
 
         x = self.deconv_layers(x)
@@ -249,7 +250,7 @@ class HeatmapHead(BaseHead):
 
                 - heatmaps (Tensor): The predicted heatmaps in shape (K, h, w)
         """
-
+        print("heatmap head predict")
         if test_cfg.get('flip_test', False):
             # TTA: flip test -> feats = [orig, flipped]
             assert isinstance(feats, list) and len(feats) == 2

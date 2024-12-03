@@ -1,0 +1,7 @@
+{
+    "name": "run-pose",
+    "image": "harbor.smoa.cc/lushaoan/mmlab:v1",
+    "gpu": 4,
+    "command": "cd /dataset/shaoanlu/github/mmlab/mmpose/ && bash run_train.sh",
+    "arch": "ampere"
+}

@@ -149,6 +149,7 @@ class BasePoseEstimator(BaseModel, metaclass=ABCMeta):
             - If ``mode='loss'``, return a dict of tensor(s) which is the loss
                 function value
         """
+        print("BasePoseEstimator mode", mode)
         if isinstance(inputs, list):
             inputs = torch.stack(inputs)
         if mode == 'loss':
@@ -187,7 +188,7 @@ class BasePoseEstimator(BaseModel, metaclass=ABCMeta):
         Returns:
             Union[Tensor | Tuple[Tensor]]: forward output of the network.
         """
-
+        print("BasePoseEstimator _forward()")
         x = self.extract_feat(inputs)
         if self.with_head:
             x = self.head.forward(x)
